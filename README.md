@@ -1,15 +1,15 @@
-# ballistics
+# ballistics2
 
 > Projectile motion calculations with **Numba** JIT-compilation and **Pint** unit support.
 
-[![pytest](https://github.com/PatrykAdamski2/ballistics/actions/workflows/pytest.yml/badge.svg)](https://github.com/PatrykAdamski2/ballistics/actions/workflows/pytest.yml)
-[![docs](https://github.com/PatrykAdamski2/ballistics/actions/workflows/pdoc.yml/badge.svg)](https://PatrykAdamski2.github.io/ballistics)
-[![PyPI](https://img.shields.io/badge/test.pypi-ballistics-blue)](https://test.pypi.org/project/ballistics/)
+[![pytest](https://github.com/PatrykAdamski2/rse_1/actions/workflows/pytest.yml/badge.svg)](https://github.com/PatrykAdamski2/rse_1/actions/workflows/pytest.yml)
+[![docs](https://github.com/PatrykAdamski2/rse_1/actions/workflows/pdoc.yml/badge.svg)](https://PatrykAdamski2.github.io/rse_1)
+[![PyPI](https://img.shields.io/badge/test.pypi-ballistics2-blue)](https://test.pypi.org/project/ballistics2/)
 
 ## Install
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple ballistics
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple ballistics2
 ```
 
 ## Quick start
@@ -38,7 +38,7 @@ print(f"Max height: {ballistics.max_height(ureg.Quantity(45,'degree'), ureg.Quan
 
 ## Demo notebook
 
-Open in Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PatrykAdamski2/ballistics/blob/main/demo.ipynb)
+Open in Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PatrykAdamski2/rse_1/blob/main/demo.ipynb)
 
 ## License
 

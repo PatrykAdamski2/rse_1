@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = "Projectile motion calculations with Numba JIT and Pint unit support"
 readme = "README.md"
 license = { text = "MIT" }
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "Patryk Adamski", email = "you@example.com" }]
 requires-python = ">=3.10"
 dependencies = [
     "numba>=0.59",
@@ -21,11 +21,10 @@ dev = ["pytest", "pdoc"]
 notebook = ["matplotlib", "ipykernel"]
 
 [project.urls]
-Homepage = "https://github.com/PatrykAdamski2/ballistics"
-Documentation = "https://PatrykAdamski2.github.io/ballistics"
+Homepage = "https://github.com/PatrykAdamski2/rse_1"
+Documentation = "https://PatrykAdamski2.github.io/rse_1"
 
 [tool.setuptools_scm]
-# version derived automatically from git tags
 
 [tool.pytest.ini_options]
 testpaths = ["."]
