@@ -16,11 +16,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install package + pdoc
-        run: pip install pdoc pint numba numpy && pip install -e . --no-build-isolation
+      - name: Install dependencies
+        run: pip install pdoc pint numba numpy
 
       - name: Generate docs
-        run: python -m pdoc -o html ballistics
+        run: PYTHONPATH=$GITHUB_WORKSPACE python -m pdoc -o html ballistics
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

@@ -15,8 +15,5 @@ jobs:
       - name: Install dependencies
         run: pip install pytest pint numba numpy
 
-      - name: Add package to path
-        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
-
       - name: Run tests
-        run: pytest --tb=short -q
+        run: PYTHONPATH=$GITHUB_WORKSPACE pytest --tb=short -q
