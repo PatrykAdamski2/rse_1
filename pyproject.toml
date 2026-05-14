@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ballistics"
+dynamic = ["version"]
+description = "Projectile motion calculations with Numba JIT and Pint unit support"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numba>=0.59",
+    "pint>=0.23",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pdoc"]
+notebook = ["matplotlib", "ipykernel"]
+
+[project.urls]
+Homepage = "https://github.com/PatrykAdamski2/ballistics"
+Documentation = "https://PatrykAdamski2.github.io/ballistics"
+
+[tool.setuptools_scm]
+# version derived automatically from git tags
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]

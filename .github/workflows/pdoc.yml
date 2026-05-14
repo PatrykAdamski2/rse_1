@@ -1,0 +1,30 @@
+name: pdoc
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  pdoc:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install package + pdoc
+        run: pip install -e ".[dev]"
+
+      - name: Generate docs
+        run: python -m pdoc -o html ballistics
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: html
