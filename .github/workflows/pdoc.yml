@@ -11,15 +11,13 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install package + pdoc
-        run: pip install -e ".[dev]"
+        run: pip install pdoc pint numba numpy && pip install -e . --no-build-isolation
 
       - name: Generate docs
         run: python -m pdoc -o html ballistics

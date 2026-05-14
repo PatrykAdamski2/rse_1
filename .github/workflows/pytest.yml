@@ -13,7 +13,10 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install pytest pint numba numpy && pip install -e . --no-build-isolation
+        run: pip install pytest pint numba numpy
+
+      - name: Add package to path
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
 
       - name: Run tests
         run: pytest --tb=short -q
